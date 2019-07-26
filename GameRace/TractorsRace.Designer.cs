@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace GameRace
 {
-    partial class harmanpreet
+    partial class TractorRace
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,8 @@ namespace GameRace
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TractorRace));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -56,6 +58,8 @@ namespace GameRace
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -111,6 +115,7 @@ namespace GameRace
             // Tractor1
             // 
             this.Tractor1.BackColor = System.Drawing.Color.Transparent;
+            this.Tractor1.Image = ((System.Drawing.Image)(resources.GetObject("Tractor1.Image")));
             this.Tractor1.Location = new System.Drawing.Point(41, 12);
             this.Tractor1.Name = "Tractor1";
             this.Tractor1.Size = new System.Drawing.Size(84, 55);
@@ -122,6 +127,7 @@ namespace GameRace
             // tractor4
             // 
             this.tractor4.BackColor = System.Drawing.Color.Transparent;
+            this.tractor4.Image = ((System.Drawing.Image)(resources.GetObject("tractor4.Image")));
             this.tractor4.Location = new System.Drawing.Point(41, 231);
             this.tractor4.Name = "tractor4";
             this.tractor4.Size = new System.Drawing.Size(84, 55);
@@ -133,6 +139,7 @@ namespace GameRace
             // tractor3
             // 
             this.tractor3.BackColor = System.Drawing.Color.Transparent;
+            this.tractor3.Image = ((System.Drawing.Image)(resources.GetObject("tractor3.Image")));
             this.tractor3.Location = new System.Drawing.Point(41, 159);
             this.tractor3.Name = "tractor3";
             this.tractor3.Size = new System.Drawing.Size(84, 55);
@@ -144,6 +151,7 @@ namespace GameRace
             // tractor2
             // 
             this.tractor2.BackColor = System.Drawing.Color.Transparent;
+            this.tractor2.Image = ((System.Drawing.Image)(resources.GetObject("tractor2.Image")));
             this.tractor2.Location = new System.Drawing.Point(41, 89);
             this.tractor2.Name = "tractor2";
             this.tractor2.Size = new System.Drawing.Size(84, 55);
@@ -208,6 +216,7 @@ namespace GameRace
             this.lblWinner.Size = new System.Drawing.Size(35, 13);
             this.lblWinner.TabIndex = 12;
             this.lblWinner.Text = "label5";
+            this.lblWinner.Click += new System.EventHandler(this.lblWinner_Click);
             // 
             // label4
             // 
@@ -338,7 +347,11 @@ namespace GameRace
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // harmanpreet
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // TractorRace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -355,7 +368,7 @@ namespace GameRace
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "harmanpreet";
+            this.Name = "TractorRace";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.radioButton1_CheckedChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -407,6 +420,8 @@ namespace GameRace
         private TextBox textBox5;
         private TextBox textBox4;
         private NumericUpDown numericUpDown1;
+        private Timer timer1;
+        private Timer timer2;
     }
 }
 

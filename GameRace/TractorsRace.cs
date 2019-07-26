@@ -13,7 +13,7 @@ using System.Media;
 
 namespace GameRace
 {
-    public partial class harmanpreet : Form
+    public partial class TractorRace : Form
     {
         public int players = 3;
         public int counter1 = 0;
@@ -31,7 +31,7 @@ namespace GameRace
         private int tractor;
         
 
-        public harmanpreet()
+        public TractorRace()
         {
             InitializeComponent();
             //give the punters and monsters some starting values
@@ -124,6 +124,12 @@ namespace GameRace
         private void button5_Click(object sender, EventArgs e)
         {
             RunRace();
+            int i;
+            Random r = new Random();
+            num = r.Next(1, 5);
+
+            timer1.Enabled = true;
+            timer2.Enabled = true;
         }
         private void RadioButton2(object sender, EventArgs e)
         {
@@ -151,7 +157,7 @@ namespace GameRace
 
             while (end != true)
             {
-                int distance = harmanpreet.ActiveForm.Width - Tractor1.Width - 20;
+                int distance = TractorRace.ActiveForm.Width - Tractor1.Width - 20;
 
                 for (int i = 0; i < 4; i++)
                 {
@@ -184,6 +190,16 @@ namespace GameRace
 
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblWinner_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void FindTheWinner()
         {
             lblWinner.Text = string.Empty;
@@ -195,7 +211,7 @@ namespace GameRace
                     myPlayer[j].Cash += myPlayer[j].Bet;
                     myPlayer[j].LabelWinner.ForeColor = Color.Black;
 
-                    harmanpreet.ActiveForm.BackColor = myPlayer[j].MyColor;
+                    TractorRace.ActiveForm.BackColor = myPlayer[j].MyColor;
                     myPlayer[j].LabelWinner.Text += Winner + " and " + myPlayer[j].PlayerName + " won  and now has " + myPlayer[j].Cash;
                 }
                 else
@@ -283,7 +299,7 @@ namespace GameRace
                     label2.Text = gaganpreet.amount.ToString();
                     textBox4.Text = "Gaganpreet bet $" + numericUpDown1.Value + " on runner " + gaganpreet.runner;
                 }
-                tractor++;
+                flag++;
             }
             /*if (Tractor == 3)
             {

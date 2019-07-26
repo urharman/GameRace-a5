@@ -12,6 +12,7 @@ namespace GameRace.Manage
         internal static int amount;
         internal static int runner;
 
+
         public harmanpreet()
         {
             PlayerName = "Harmanpreet";

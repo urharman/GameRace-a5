@@ -16,7 +16,7 @@ namespace GameRace.Manage
             {
                 PlayerName = "Anil";
                 Tractor = "";
-                Cash = 50;
+                Cash = 100;
                 MyColor = Color.SteelBlue;
             }
 

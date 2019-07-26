@@ -16,7 +16,7 @@ namespace GameRace
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new harmanpreet());
+            Application.Run(new TractorRace());
         }
     }
 }
